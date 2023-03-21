@@ -26,7 +26,6 @@ function responsiveMenu() {
 
 //detecto el scrolling para aplicar la animación del la barra de habilidades
 window.onscroll = function() { efectoHabilidades() };
-
 //funcion que aplica la animación de la barra de habilidades
 function efectoHabilidades() {
     var skills = document.getElementById("skills");
@@ -40,5 +39,23 @@ function efectoHabilidades() {
         document.getElementById("uml").classList.add("barra-progreso6");
 
     }
-
+}
+function EnviarFormulario(){
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("formulario").innerHTML = this.response;
+            document.getElementById("nombre").value = "";
+            document.getElementById("direccion").value = "";
+            document.getElementById("tema").value = "";
+            document.getElementById("mensaje").value = "";
+        }
+    }
+    xhttp.open("POST","./consultas.php",true);
+    data = new FormData();
+    data.append("nombre", document.getElementById("nombre").value);
+    data.append("direccion", document.getElementById("direccion").value);
+    data.append("tema", document.getElementById("tema").value);
+    data.append("mensaje", document.getElementById("mensaje").value);
+    xhttp.send(data);
 }

@@ -58,7 +58,7 @@
             <h3>Desarrollador Web</h3>
             <p>Soy una persona responsable que le encantan los retos y el aprendizaje continuo, esto me permite conocer acerca de distintas tecnologías que se utilizan en el mercado ya que lo que hago me apasiona, referente a mis preferencias me gusta mucho hacer deporte como y ejercicios de cardio para ejercitarme constantemente con una alimentación saludable.</p>
             <p>EJERCICIO - POLITICA - TECNOLOGIA - SALUD</p>
-            <a href="#">Descargar CV</a>
+            <a href="CV.pdf" download="curriculum">Descargar CV</a>
         </div>
     </section>
 
@@ -92,17 +92,6 @@
                 <hr>
                 <p>Administración de proyectos alojados en cualquier Hosting</p>
             </div>
-            <!-- <div class="servicio">
-                <span class="icono"><i class="fa-solid fa-palette"></i></span>
-                <h4>Diseñador Gráfico</h4>
-                <hr>
-                <ul class="servicios-tag">
-                    <li>Web</li>
-                    <li>Graphic</li>
-                    <li>SEO</li>
-                </ul>
-                <p>I have been providing web design services with great success for 9 years. The client is very happy</p>
-            </div> -->
             <div class="servicio">
                 <span class="icono"><i class="fa-solid fa-person-circle-question"></i></span>
                 <h4>Consultor Externo</h4>
@@ -250,20 +239,22 @@
     <section id="contacto">
         <h3 class="titulo-seccion">Contactanos ahora</h3>
         <div class="contenedor-form">
-            <form action="">
+            <div>
                 <div class="fila mitad">
-                    <input type="text" placeholder="Nombre Completo *" class="input-mitad">
-                    <input type="email" placeholder="Dirección de Email" class="input-mitad">
+                    <input type="text" id="nombre" placeholder="Nombre Completo *" class="input-mitad">
+                    <input type="email" id="direccion" placeholder="Dirección de Email" class="input-mitad">
                 </div>
                 <div class="fila">
-                    <input type="text" placeholder="Tema..." class="input-full">
+                    <input type="text" id="tema" placeholder="Tema..." class="input-full">
                 </div>
                 <div class="fila">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full"></textarea>
+                    <textarea name="" id="mensaje" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full"></textarea>
                 </div>
+                <input type="submit" onclick="EnviarFormulario()" value="Enviar Mensaje" class="btn-enviar">
+            </div>
+            <div id="formulario">
 
-                <input type="submit" value="Enviar Mensaje" class="btn-enviar">
-            </form>
+            </div>
         </div>
     </section>
 
@@ -271,9 +262,9 @@
     <footer>
         <p>Todos los derechos reservados - 2023</p>
         <div class="redes">
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+            <a href="https://www.linkedin.com/in/enoc-rubio-paucar-374a34237/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100063001935542"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/mc_enoc06/"><i class="fa-brands fa-instagram-square"></i></a>
         </div>
     </footer>
     <script src="script.js"></script>
